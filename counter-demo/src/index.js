@@ -5,12 +5,24 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CounterProvider } from './CounterContext';
 
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CounterProvider>
+    {/* Using Context API */}
+    {/* <CounterProvider>
       <App />
-    </CounterProvider>
+    </CounterProvider> */}
+    {/* Using Context API */}
+
+    {/* Using Redux Toolkit */}
+    <Provider store={store}>
+      <App />
+    </Provider>
+    {/* Using Redux Toolkit */}
+
   </React.StrictMode>
 );
 
